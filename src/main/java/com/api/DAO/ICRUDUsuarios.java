@@ -6,15 +6,21 @@ import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 
 import com.api.entities.Persona;
-public interface ICRUDPersonas extends CrudRepository<Persona, Integer> {
+import com.api.entities.Usuarios;
+public interface ICRUDUsuarios extends CrudRepository<Usuarios, Integer> {
 	
-	public List<Persona> findAll();
+	/*
+	public List<Usuarios> findAll();
 	
-	public Optional<Persona> findById(Integer idPersona);
+	public Optional<Usuarios> findById(Integer idPersona);
 	
 	public <S extends Persona> S save(S persona);
 	
 	public void deleteById(Integer idPersona);
 	
 	public boolean existsById(Integer id);
+
+	
+	public Usuarios logIn(String user, String pass);
+	*/
 }

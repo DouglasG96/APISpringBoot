@@ -2,10 +2,15 @@ package com.api.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -27,9 +32,10 @@ public class Persona implements Serializable {
 	private String telefono;
 	
 	/*
-	@Column
-	@Temporal(TemporalType.DATE)
-	private Date createAt;
+	@OneToMany(fetch = FetchType.LAZY,
+            cascade =  CascadeType.ALL,
+            mappedBy = "Persona")
+	private Persona usuarioPersona;
 	*/
 	
 	public Persona() {

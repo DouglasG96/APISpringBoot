@@ -19,10 +19,9 @@ public class PersonasModel implements ICRUDPersonas{
 	
 	@Override
 	public <S extends Persona> S save(S entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return interfacePersona.save(entity);
 	}
-
+	
 	@Override
 	public <S extends Persona> Iterable<S> saveAll(Iterable<S> entities) {
 		// TODO Auto-generated method stub
@@ -31,14 +30,12 @@ public class PersonasModel implements ICRUDPersonas{
 
 	@Override
 	public Optional<Persona> findById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return interfacePersona.findById(id);
 	}
 
 	@Override
 	public boolean existsById(Integer id) {
-		// TODO Auto-generated method stub
-		return false;
+		return interfacePersona.existsById(id);
 	}
 
 	@Override
@@ -55,8 +52,7 @@ public class PersonasModel implements ICRUDPersonas{
 
 	@Override
 	public void deleteById(Integer id) {
-		// TODO Auto-generated method stub
-		
+		interfacePersona.deleteById(id);
 	}
 
 	@Override
@@ -87,5 +83,4 @@ public class PersonasModel implements ICRUDPersonas{
 	public List<Persona> findAll() {
 		return interfacePersona.findAll();
 	}
-
 }
