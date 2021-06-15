@@ -23,10 +23,12 @@ public class UsuariosController {
 	@Autowired
 	private ICRUDUsuarios iCrudUsuarios;
 	
+	/*
 	@PostMapping("/login")
 	public Usuarios logIn(@RequestParam("nombreUsuario") String nombreUsuario, @RequestParam("clave") String clave, UriComponentsBuilder builder)
 	{
-		return iCrudUsuarios.logIn(nombreUsuario, clave);
+		//return iCrudUsuarios.logIn(nombreUsuario, clave);
 	}
+	*/
 	
 }
